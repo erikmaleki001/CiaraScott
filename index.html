@@ -239,6 +239,11 @@
   .lightbox .lb-stage{width:min(90vw,460px);aspect-ratio:.82;border-radius:16px;position:relative;
     overflow:hidden;display:flex;align-items:flex-end;justify-content:center;
     box-shadow:0 0 60px rgba(155,92,255,.4)}
+  /* on phones the full view fills the entire screen */
+  @media(max-width:600px){
+    .lightbox{padding:0}
+    .lightbox .lb-stage{width:100vw;height:100dvh;aspect-ratio:auto;border-radius:0;box-shadow:none}
+  }
   .lightbox .lb-stage::after{content:"";position:absolute;inset:0;
     background:radial-gradient(circle at 50% 30%,transparent,rgba(6,4,10,.5))}
   .lightbox .lb-stage span{position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);z-index:2;
@@ -421,8 +426,9 @@
       lbStage.querySelector('span').textContent = swatch.querySelector('span').textContent;
       lbStage.querySelector('small').textContent = swatch.querySelector('small').textContent;
       lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
     }
-    function closeLightbox(){ lb.classList.remove('open'); }
+    function closeLightbox(){ lb.classList.remove('open'); document.body.style.overflow = ''; }
     document.querySelectorAll('.swatch').forEach(function(s){
       s.addEventListener('click', function(){
         if(window.matchMedia('(max-width:600px)').matches){ openLightbox(s); }
