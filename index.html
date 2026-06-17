@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>31 Ways to Dye — Gothic Rainbow Hair Atelier by Ciara Fraiser Scott</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700;900&family=EB+Garamond:ital@0;1&family=Pirata+One&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#06040a;
+    --bg2:#0d0817;
+    --panel:#120b1f;
+    --bone:#e7dcc4;
+    --bone-dim:#b8ab8f;
+    --muted:#9a86b8;
+    --blood:#c4122f;
+    --ember:#ff7a18;
+    --tox:#7bff5a;
+    --violet:#a020f0;
+    --cyan:#00d4ff;
+    --rainbow:linear-gradient(90deg,#c4122f,#ff7a18,#ffe600,#1bff7a,#00d4ff,#9b5cff,#ff5cf2);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'EB Garamond',Georgia,serif;
+    background:var(--bg);color:var(--bone);
+    overflow-x:hidden;line-height:1.7;font-size:18px;
+  }
+  h1,h2,h3,h4{font-family:'Cinzel',serif;letter-spacing:.5px;line-height:1.15;font-weight:900}
+  .blackletter{font-family:'Pirata One','Cinzel Decorative',serif;font-weight:400;letter-spacing:1px}
+
+  /* atmosphere */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-3;
+    background:
+      radial-gradient(900px circle at 15% 8%, rgba(160,32,240,.16), transparent 55%),
+      radial-gradient(800px circle at 85% 18%, rgba(196,18,47,.13), transparent 55%),
+      radial-gradient(1000px circle at 50% 108%, rgba(0,212,255,.10), transparent 55%),
+      var(--bg);
+  }
+  /* drifting fog */
+  body::after{
+    content:"";position:fixed;inset:-20%;z-index:-2;pointer-events:none;opacity:.5;
+    background:
+      radial-gradient(closest-side, rgba(120,60,180,.10), transparent) 10% 30%/45% 45% no-repeat,
+      radial-gradient(closest-side, rgba(180,40,80,.08), transparent) 80% 60%/50% 50% no-repeat;
+    animation:fog 26s ease-in-out infinite alternate;
+  }
+  @keyframes fog{to{transform:translate3d(4%,-3%,0) scale(1.1)}}
+  .floaty{position:fixed;z-index:-1;opacity:.18;font-size:1.8rem;animation:drift 16s ease-in-out infinite;filter:grayscale(.3)}
+  @keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-26px) rotate(6deg)}}
+
+  /* nav */
+  nav{
+    position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+    padding:12px 6vw;background:rgba(6,4,10,.78);backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(155,92,255,.22);
+  }
+  .nav-brand{display:flex;align-items:center;gap:12px}
+  .nav-brand img{height:46px;width:46px;border-radius:50%;object-fit:cover;
+    box-shadow:0 0 18px rgba(155,92,255,.45);border:1px solid rgba(231,220,196,.25)}
+  .nav-brand b{font-family:'Cinzel Decorative',serif;font-size:1.05rem;color:var(--bone);letter-spacing:1px}
+  nav ul{display:flex;gap:28px;list-style:none}
+  nav a{color:var(--bone-dim);text-decoration:none;font-family:'Cinzel',serif;font-weight:500;
+    font-size:.82rem;text-transform:uppercase;letter-spacing:2px;transition:.25s}
+  nav a:hover{color:#fff;text-shadow:0 0 14px var(--ember)}
+
+  .btn{
+    display:inline-block;padding:15px 34px;border-radius:2px;font-family:'Cinzel',serif;font-weight:700;
+    font-size:.82rem;text-transform:uppercase;letter-spacing:2.5px;text-decoration:none;cursor:pointer;
+    color:#06040a;background:var(--rainbow);background-size:220%;border:none;transition:.3s;
+    box-shadow:0 0 26px rgba(255,122,24,.35);
+  }
+  .btn:hover{transform:translateY(-2px);background-position:100%;box-shadow:0 0 40px rgba(155,92,255,.6)}
+  .btn.ghost{background:transparent;color:var(--bone);border:1px solid rgba(155,92,255,.5);
+    box-shadow:0 0 16px rgba(160,32,240,.25)}
+  .btn.ghost:hover{border-color:var(--ember);color:#fff}
+  .btn.sm{padding:9px 18px;font-size:.7rem}
+
+  /* hero */
+  header.hero{min-height:96vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:70px 6vw 90px;position:relative}
+  .hero-logo{position:relative;width:min(340px,72vw);aspect-ratio:1;margin-bottom:6px}
+  .hero-logo::before{content:"";position:absolute;inset:-14%;border-radius:50%;z-index:-1;
+    background:conic-gradient(from 0deg,#c4122f,#ff7a18,#ffe600,#1bff7a,#00d4ff,#9b5cff,#ff5cf2,#c4122f);
+    filter:blur(38px);opacity:.55;animation:spin 18s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .hero-logo img{width:100%;height:100%;border-radius:50%;object-fit:cover;position:relative;
+    box-shadow:0 0 60px rgba(0,0,0,.8),0 0 30px rgba(155,92,255,.4);
+    animation:flicker 6s infinite}
+  @keyframes flicker{0%,97%,100%{opacity:1}98%{opacity:.82}99%{opacity:.92}}
+  .hero h1{font-family:'Cinzel Decorative',serif;font-size:clamp(1.6rem,4.6vw,3rem);
+    text-transform:uppercase;margin:18px 0 6px;
+    background:var(--rainbow);background-size:300%;-webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:flow 9s linear infinite;filter:drop-shadow(0 0 22px rgba(155,92,255,.4))}
+  @keyframes flow{to{background-position:300% 0}}
+  .hero .sub{font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:5px;text-transform:uppercase;
+    color:var(--muted);margin-bottom:18px}
+  .tagline{font-size:1.2rem;color:var(--bone-dim);max-width:600px;margin:0 auto 30px;font-style:italic}
+  .hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--muted);
+    font-size:.7rem;letter-spacing:3px;text-transform:uppercase;font-family:'Cinzel',serif;animation:bob 2.4s infinite}
+  @keyframes bob{50%{transform:translate(-50%,8px)}}
+
+  /* section frame */
+  section{padding:96px 6vw;max-width:1180px;margin:0 auto}
+  .eyebrow{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:5px;text-transform:uppercase;
+    color:var(--ember);text-align:center;display:block;margin-bottom:10px}
+  .sec-head{text-align:center;margin-bottom:58px}
+  .sec-head h2{font-size:clamp(2rem,5vw,3.1rem);text-transform:uppercase;color:var(--bone);
+    text-shadow:0 0 26px rgba(160,32,240,.45)}
+  .sec-head h2 em{font-style:normal;background:var(--rainbow);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sec-head p{color:var(--muted);max-width:600px;margin:14px auto 0}
+  .rule{width:90px;height:2px;margin:18px auto 0;background:var(--rainbow);border-radius:2px}
+
+  /* about + video */
+  .about{display:grid;grid-template-columns:0.85fr 1.15fr;gap:54px;align-items:center}
+  .video-frame{position:relative;border-radius:14px;padding:12px;
+    background:linear-gradient(160deg,rgba(160,32,240,.25),rgba(196,18,47,.18));
+    box-shadow:0 0 50px rgba(155,92,255,.3)}
+  .video-frame::before{content:"";position:absolute;inset:0;border-radius:14px;padding:1.5px;
+    background:var(--rainbow);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;opacity:.8}
+  .video-frame video{width:100%;display:block;border-radius:8px;background:#000}
+  .video-cap{text-align:center;font-style:italic;color:var(--muted);font-size:.85rem;margin-top:12px}
+  .about h3{font-family:'Cinzel',serif;font-size:1.7rem;color:var(--bone);margin-bottom:16px}
+  .about h3 em{font-style:normal;color:var(--ember)}
+  .about p{color:var(--bone-dim);margin-bottom:16px}
+  .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .badge{padding:8px 16px;border-radius:2px;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:1.5px;
+    text-transform:uppercase;border:1px solid rgba(155,92,255,.4);color:var(--bone);background:rgba(160,32,240,.1)}
+
+  /* services */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .card{position:relative;background:linear-gradient(165deg,rgba(160,32,240,.1),rgba(13,8,23,.95));
+    border:1px solid rgba(155,92,255,.22);border-radius:10px;padding:34px 28px;transition:.3s;overflow:hidden}
+  .card::before{content:"";position:absolute;inset:0;border-radius:10px;padding:1px;background:var(--rainbow);
+    -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:.35s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(0,0,0,.5)}
+  .card:hover::before{opacity:1}
+  .card .ico{font-size:2rem;margin-bottom:14px;display:block;filter:drop-shadow(0 0 10px rgba(155,92,255,.5))}
+  .card h3{font-size:1.15rem;color:var(--bone);margin-bottom:8px;letter-spacing:1px}
+  .card p{color:var(--muted);font-size:.92rem;margin-bottom:18px;font-family:'EB Garamond',serif}
+  .price{font-family:'Cinzel',serif;font-weight:900;font-size:1.5rem;
+    background:var(--rainbow);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .price small{font-size:.7rem;color:var(--muted);font-family:'Cinzel',serif;letter-spacing:1px}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+  .swatch{aspect-ratio:.82;border-radius:10px;position:relative;overflow:hidden;cursor:pointer;
+    display:flex;align-items:flex-end;justify-content:center;transition:.35s;box-shadow:0 6px 24px rgba(0,0,0,.55)}
+  .swatch::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,transparent,rgba(6,4,10,.55))}
+  .swatch span{font-size:2.4rem;position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);z-index:2;
+    filter:drop-shadow(0 2px 8px rgba(0,0,0,.7))}
+  .swatch small{position:relative;z-index:3;width:100%;text-align:center;padding:10px;font-family:'Cinzel',serif;
+    font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:#fff;
+    background:linear-gradient(transparent,rgba(6,4,10,.85))}
+  .swatch:hover{transform:scale(1.04) rotate(-1deg)}
+  .g1{background:linear-gradient(150deg,#c4122f,#ff7a18,#ffe600)}
+  .g2{background:linear-gradient(150deg,#1bff7a,#00d4ff)}
+  .g3{background:linear-gradient(150deg,#9b5cff,#ff5cf2)}
+  .g4{background:linear-gradient(150deg,#ff7a18,#a020f0)}
+  .g5{background:linear-gradient(150deg,#00d4ff,#9b5cff,#c4122f)}
+  .g6{background:linear-gradient(150deg,#ffe600,#1bff7a,#00d4ff)}
+  .g7{background:linear-gradient(150deg,#ff5cf2,#c4122f,#ff7a18)}
+  .g8{background:linear-gradient(150deg,#a020f0,#00d4ff,#1bff7a)}
+
+  /* booking */
+  .booking{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:start}
+  form{display:flex;flex-direction:column;gap:16px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  label{font-family:'Cinzel',serif;font-weight:500;font-size:.72rem;letter-spacing:1.5px;
+    text-transform:uppercase;color:var(--muted)}
+  input,select,textarea{padding:14px 16px;border-radius:4px;border:1px solid rgba(155,92,255,.3);
+    background:rgba(13,8,23,.85);color:var(--bone);font-family:'EB Garamond',serif;font-size:1rem;transition:.25s}
+  input::placeholder,textarea::placeholder{color:#6c5d82}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ember);box-shadow:0 0 0 3px rgba(255,122,24,.18)}
+  textarea{resize:vertical;min-height:96px}
+  .contact-card{background:linear-gradient(165deg,rgba(160,32,240,.12),rgba(13,8,23,.95));
+    border:1px solid rgba(155,92,255,.22);border-radius:10px;padding:38px}
+  .contact-card h3{font-family:'Cinzel',serif;color:var(--ember);margin-bottom:22px;font-size:1.4rem;letter-spacing:1px}
+  .contact-row{display:flex;align-items:center;gap:14px;margin-bottom:18px;color:var(--bone-dim)}
+  .contact-row .ic{font-size:1.3rem;width:46px;height:46px;border-radius:8px;flex:none;display:flex;
+    align-items:center;justify-content:center;background:rgba(160,32,240,.16);border:1px solid rgba(155,92,255,.35)}
+  .contact-row a{color:var(--bone-dim);text-decoration:none}
+  .contact-row a:hover{color:#fff}
+  .contact-row b{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--bone)}
+  .hours{margin-top:24px;border-top:1px solid rgba(155,92,255,.22);padding-top:20px}
+  .hours div{display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem;padding:4px 0}
+  .hours b{color:var(--bone)}
+  .msg{padding:15px;border-radius:6px;background:rgba(27,255,122,.1);border:1px solid rgba(27,255,122,.45);
+    color:#aaffcf;text-align:center;font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:1px;display:none}
+
+  footer{text-align:center;padding:54px 6vw;border-top:1px solid rgba(155,92,255,.22);margin-top:50px}
+  footer img{height:74px;width:74px;border-radius:50%;object-fit:cover;
+    box-shadow:0 0 24px rgba(155,92,255,.4);margin-bottom:14px}
+  footer .fb{font-family:'Cinzel Decorative',serif;font-size:1.2rem;color:var(--bone);letter-spacing:1px;margin-bottom:10px}
+  footer .socials{display:flex;gap:18px;justify-content:center;margin:14px 0;font-size:1.3rem}
+  footer p{color:var(--muted);font-size:.82rem}
+
+  @media(max-width:860px){
+    nav ul{display:none}
+    .about,.booking{grid-template-columns:1fr}
+    .video-frame{max-width:340px;margin:0 auto}
+  }
+</style>
+</head>
+<body>
+  <div class="floaty" style="top:14%;left:5%">🦇</div>
+  <div class="floaty" style="top:28%;right:7%;animation-delay:-5s">🕸️</div>
+  <div class="floaty" style="top:66%;left:9%;animation-delay:-8s">🦇</div>
+  <div class="floaty" style="top:52%;right:4%;animation-delay:-3s">🌙</div>
+
+  <nav>
+    <div class="nav-brand">
+      <img src="logo.png" alt="31 Ways to Dye logo">
+      <b>31 Ways to Dye</b>
+    </div>
+    <ul>
+      <li><a href="#about">The Atelier</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#book">Book</a></li>
+    </ul>
+    <a href="#book" class="btn sm">Book</a>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-logo">
+      <img src="logo.png" alt="31 Ways to Dye — gothic rainbow hair atelier">
+    </div>
+    <h1>31 Ways to Dye</h1>
+    <p class="sub">Gothic Rainbow Hair Atelier</p>
+    <p class="tagline">Where wicked color meets master craft. Bewitching dye work &amp; cuts by Ciara Fraiser Scott — every day is Halloween.</p>
+    <div class="hero-btns">
+      <a href="#book" class="btn">Summon an Appointment</a>
+      <a href="#gallery" class="btn ghost">Behold the Gallery</a>
+    </div>
+    <div class="scroll-cue">▾ Enter ▾</div>
+  </header>
+
+  <section id="about">
+    <div class="about">
+      <div>
+        <div class="video-frame">
+          <video src="ciara_video.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <p class="video-cap">✦ Color in motion — straight from Ciara's chair ✦</p>
+      </div>
+      <div>
+        <span class="eyebrow" style="text-align:left">The Atelier</span>
+        <div class="sec-head" style="text-align:left;margin-bottom:18px">
+          <h2 style="text-align:left">Meet <em>Ciara</em></h2>
+        </div>
+        <h3>Color is her <em>potion</em>. The macabre is her <em>muse</em>.</h3>
+        <p>Ciara Fraiser Scott is a master colorist who turns hair into living stained glass — molten sunset melts, electric mermaid fades, and prismatic rainbows pulled straight from a midnight spell.</p>
+        <p>Her chair is a cauldron of creativity: gothic at heart, fearless with color, and obsessed with the haunting beauty of Halloween. Whether you crave a whisper of violet or a full spectrum transformation, Ciara brews the perfect shade for you — and only you.</p>
+        <div class="badges">
+          <span class="badge">🌈 Rainbow Specialist</span>
+          <span class="badge">🎃 Halloween Devotee</span>
+          <span class="badge">⚗️ Vivid Color Master</span>
+          <span class="badge">✂️ Precision Cuts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="sec-head">
+      <span class="eyebrow">The Spellbook</span>
+      <h2>Our <em>Services</em></h2>
+      <div class="rule"></div>
+      <p>Every look is custom-conjured. Reach out for a free consultation and Ciara will craft the perfect spell for you.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="ico">🌈</span><h3>Full Rainbow Dye</h3><p>A head-to-tip prism of custom vivid color, hand-blended your way.</p></div>
+      <div class="card"><span class="ico">🔮</span><h3>Color Melt &amp; Balayage</h3><p>Seamless multi-tone melts — sunsets, galaxies, mermaid fades.</p></div>
+      <div class="card"><span class="ico">💜</span><h3>Vivid Accent / Peekaboo</h3><p>Hidden pops of neon or framing streaks of pure, glowing color.</p></div>
+      <div class="card"><span class="ico">✂️</span><h3>Cut &amp; Style</h3><p>Precision cut, shape &amp; finish to show off your color.</p></div>
+      <div class="card"><span class="ico">👻</span><h3>Bleach &amp; Tone</h3><p>The essential lift for those bold, otherworldly vivid shades.</p></div>
+      <div class="card"><span class="ico">🎃</span><h3>Halloween Special</h3><p>Costume-ready color &amp; styling for the spookiest season.</p></div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="sec-head">
+      <span class="eyebrow">The Coven's Work</span>
+      <h2>The <em>Gallery</em></h2>
+      <div class="rule"></div>
+      <p>A glimpse into Ciara's cauldron of color. Real looks, real magic.</p>
+    </div>
+    <div class="gallery">
+      <div class="swatch g1"><span>🌅</span><small>Sunset Melt</small></div>
+      <div class="swatch g2"><span>🧜‍♀️</span><small>Mermaid Fade</small></div>
+      <div class="swatch g3"><span>🔮</span><small>Cosmic Violet</small></div>
+      <div class="swatch g4"><span>🔥</span><small>Ember Glow</small></div>
+      <div class="swatch g5"><span>🌌</span><small>Galaxy Swirl</small></div>
+      <div class="swatch g6"><span>🧪</span><small>Toxic Citrus</small></div>
+      <div class="swatch g7"><span>🍬</span><small>Candy Hex</small></div>
+      <div class="swatch g8"><span>👽</span><small>Neon Phantom</small></div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="sec-head">
+      <span class="eyebrow">Cross the Threshold</span>
+      <h2>Book Your <em>Transformation</em></h2>
+      <div class="rule"></div>
+      <p>Tell Ciara your dream look and she'll conjure the perfect appointment.</p>
+    </div>
+    <div class="booking">
+      <form id="bookForm">
+        <div class="msg" id="msg">🎃 Your request has been cast — Ciara will be in touch soon.</div>
+        <div class="field"><label for="name">Name</label><input type="text" id="name" placeholder="Your name" required></div>
+        <div class="field"><label for="email">Email</label><input type="email" id="email" placeholder="you@example.com" required></div>
+        <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="(555) 555-5555"></div>
+        <div class="field"><label for="service">Service</label>
+          <select id="service">
+            <option>Full Rainbow Dye</option>
+            <option>Color Melt &amp; Balayage</option>
+            <option>Vivid Accent / Peekaboo</option>
+            <option>Cut &amp; Style</option>
+            <option>Bleach &amp; Tone</option>
+            <option>Halloween Special</option>
+            <option>Not sure — help me decide</option>
+          </select>
+        </div>
+        <div class="field"><label for="notes">Dream look / notes</label><textarea id="notes" placeholder="Describe the colors you're dreaming of..."></textarea></div>
+        <button type="submit" class="btn">Cast My Booking ✦</button>
+      </form>
+
+      <div class="contact-card">
+        <h3>Visit the Atelier</h3>
+        <div class="contact-row"><div class="ic">📞</div><div><b>Call / Text</b><br><a href="tel:5555555555">555-555-5555</a></div></div>
+        <div class="contact-row"><div class="ic">✉️</div><div><b>Email</b><br><a href="mailto:ciara@example.com">ciara@example.com</a></div></div>
+        <div class="contact-row"><div class="ic">📍</div><div><b>Studio</b><br>By appointment — drop a line to book</div></div>
+        <div class="hours">
+          <div><span>Tue – Thu</span><b>10am – 7pm</b></div>
+          <div><span>Fri – Sat</span><b>9am – 8pm</b></div>
+          <div><span>Sun – Mon</span><b>Resting the cauldron</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img src="logo.png" alt="31 Ways to Dye">
+    <div class="fb">31 Ways to Dye</div>
+    <div class="socials">📸 🦇 🌈 👻</div>
+    <p>Gothic rainbow hair &amp; spooky style by Ciara Fraiser Scott.<br>© 2026 31 Ways to Dye · Every day is Halloween.</p>
+  </footer>
+
+  <script>
+    document.getElementById('bookForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var msg = document.getElementById('msg');
+      msg.style.display='block';
+      this.reset();
+      msg.scrollIntoView({behavior:'smooth',block:'center'});
+      setTimeout(function(){ msg.style.display='none'; }, 6000);
+    });
+  </script>
+</body>
+</html>
