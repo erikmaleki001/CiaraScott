@@ -251,9 +251,12 @@
   .lightbox .lb-stage small{position:relative;z-index:3;width:100%;text-align:center;padding:18px;
     font-family:'Cinzel',serif;font-size:1rem;letter-spacing:2px;text-transform:uppercase;color:#fff;
     background:linear-gradient(transparent,rgba(6,4,10,.85))}
-  .lightbox .lb-close{position:absolute;top:20px;right:24px;width:48px;height:48px;border-radius:50%;
-    border:1px solid rgba(155,92,255,.5);background:rgba(13,8,23,.85);color:#fff;font-size:1.5rem;
-    cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+  .lightbox .lb-close{position:absolute;z-index:10;
+    top:max(20px,env(safe-area-inset-top));right:max(20px,env(safe-area-inset-right));
+    width:48px;height:48px;border-radius:50%;
+    border:1px solid rgba(155,92,255,.6);background:rgba(13,8,23,.92);color:#fff;font-size:1.5rem;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;
+    box-shadow:0 0 18px rgba(0,0,0,.6)}
 </style>
 </head>
 <body>
