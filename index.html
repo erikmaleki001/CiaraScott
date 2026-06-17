@@ -226,6 +226,10 @@
     .about,.booking{grid-template-columns:1fr}
     .video-frame{max-width:340px;margin:0 auto}
   }
+  /* mobile: gallery 2 photos per row */
+  @media(max-width:600px){
+    .gallery{grid-template-columns:repeat(2,1fr);gap:12px}
+  }
 </style>
 </head>
 <body>
